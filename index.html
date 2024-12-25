@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameReview</title>
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg p-0">
+          <div class="container justify-content-center">
+            <h1 class="mb-3">
+              <a
+                class="navbar-brand text-uppercase text-white fw-bold"
+                id="homePage"
+              >
+                <img
+                  src="imgs/demon-skull.png"
+                  width="30"
+                  class="navLogo"
+                  alt=""
+                />
+                Games Library
+              </a>
+            </h1>
+          </div>
+        </nav>
+
+        <div class="heading-title pt-4 pb-4 fw-bold m-0 fs-1 text-uppercase">
+          Discover new games!
+          <div class="heading-sub-title fs-5 text-capitalize">
+            <span>With the largest database of games</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="filter-container d-flex align-items-center">
+              <div class="dropdown">
+                <button
+                  class="btn btn-dark dropdown-toggle fw-bold text-capitalize"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Filter By genre
+                </button>
+                <ul
+                  class="dropdown-menu bg-secondary-subtle"
+                  id="filterId"
+                ></ul>
+              </div>
+              <button
+                type="button"
+                id="filterBtn"
+                class="btn btn-link text-secondary d-none"
+              >
+                Reset Filters
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-2 g-2" id="gamesRow"></div>
+        <div class="row mt-4">
+          <ul
+            class="d-flex justify-content-center list-unstyled gap-4 main-clr"
+            id="pagination"
+          ></ul>
+        </div>
+      </div>
+    </main>
+    <!-- POP UP SECTION -->
+    <section id="gameInfoPage"></section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

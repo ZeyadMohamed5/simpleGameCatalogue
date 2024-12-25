@@ -1,0 +1,161 @@
+:root {
+  --main-clr: #750d20;
+}
+
+a {
+  cursor: pointer;
+}
+
+main {
+  background: linear-gradient(#000000b9 0% 100%), url(../imgs/686773.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.main-clr {
+  color: var(--main-clr);
+}
+nav {
+  border-radius: 16px;
+  background-color: var(--main-clr);
+}
+.navLogo {
+  vertical-align: text-top;
+}
+
+.heading-title {
+  color: #ffd5d2;
+}
+
+.card {
+  background-color: #1b1a1c;
+  border-radius: 4px;
+  box-shadow: -3px 3px 20px 0px #000000eb;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+.card:hover .fixed-image {
+  opacity: 1;
+}
+
+.fixed-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: transform 0.3s ease-in;
+}
+.fixed-image-large {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+.fixed-image-small {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+}
+
+.card-title {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 198px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.card-title:hover {
+  color: white;
+}
+
+small {
+  color: rgb(145 145 145) !important;
+}
+.platformIcons {
+  color: rgb(145 145 145);
+  display: flex;
+  gap: 10px;
+  transition: color 0.5s ease;
+}
+.platformIcons svg:hover,
+#gameInfoPage .platformIcons svg:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#pagination {
+  font-size: 21px;
+}
+
+.img-drawer-border {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.img-drawer-border:hover {
+  border-color: white;
+}
+
+#exitBtn {
+  padding-bottom: 10px;
+  color: #858585;
+}
+#gameInfoPage {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  overflow: auto;
+  height: 100vh;
+  background-color: rgb(17, 15, 15);
+}
+
+#gameInfoPage .platformIcons {
+  color: rgb(108, 117, 125);
+  font-size: 1.5rem;
+}
+
+#gameInfoPage .gameTags span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.storeList {
+  color: rgb(190 190 190);
+}
+#gameInfoPage small {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .fixed-image {
+    height: 250px;
+  }
+  .fixed-image-large {
+    height: 250px;
+  }
+  .fixed-image-small {
+    width: 100%;
+    height: 65px;
+    object-fit: cover;
+  }
+}
+
+.dropdown-item:active {
+  background-color: var(--main-clr) !important;
+}
+
+.pageActive {
+  color: #330a12;
+}
+
+#filterId {
+  height: 380px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
