@@ -26,7 +26,7 @@ export const options = {
 const home = document
   .getElementById("homePage")
   .addEventListener("click", () => {
-    console.log("click");
+    
     page = 1;
     currentPage = 2;
     currentGenre = null;
@@ -38,15 +38,12 @@ async function fetchGames() {
   try {
     if (cache[page]) {
       let games = cache[page];
-      console.log("Using cached data for page:", page);
-
       if (currentGenre !== null) {
         games = getGamesbyGenre(games, currentGenre);
       }
       games.length === 0 ? renderEmptiness() : displayGames(games);
       return;
     }
-    console.log("Fetching data for page:", page);
 
     const response = await fetch(url(page), options);
     const result = await response.json();
@@ -71,7 +68,6 @@ async function displayGames(games) {
       resetFilter.classList.remove("d-none");
       currentGenre = Number(genreId);
       currentGames = getGamesbyGenre(games, currentGenre);
-      console.log(currentGenre);
       currentGames.length === 0
         ? renderEmptiness()
         : renderingGames(currentGames);
@@ -308,7 +304,7 @@ function pagination(current) {
 
 pages.addEventListener("click", (e) => {
   let target = e.target;
-  console.log(target);
+
   if (target.closest("#nextPage")) {
     page++;
     currentPage = page;
